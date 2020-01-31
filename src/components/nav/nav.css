@@ -1,0 +1,33 @@
+.navStyle{
+    text-align: center;
+    color: brown;
+    height: 70px;
+    background-color: grey;
+}
+
+.headers{
+    text-align: center;
+}
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    height: 100%;
+
+}
+
+li{
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+li a{
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: cornflowerblue;
+}

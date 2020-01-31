@@ -1,0 +1,30 @@
+.homeStyle{
+    color: blueviolet;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: calc(10px + 2vmin);
+}
+
+.imageStyle{
+    width: 50vw;
+    display: flex;
+}
+
+.egg {
+    width: 100%;
+}
+
+p{
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 400px) {
+    .imageStyle {
+        width: 100vw;
+    }
+}
