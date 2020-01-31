@@ -1,11 +1,6 @@
 import React from 'react';
 import "./nav.css";
-import {
-    Link,
-    BrowserRouter as Router,
-    Switch,
-    Route
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
     return (
