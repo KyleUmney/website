@@ -1,32 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+
 import Nav from "./components/nav";
-import Home from "./Pages/Home";
-import Projects from "./Pages/projects";
-import About from "./Pages/About"
-import Contact from "./Pages/Contact"
+
+import Home from "./pages/Home";
+import Projects from "./pages/projects";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import {
-  Link,
   BrowserRouter as Router,
-  Switch,
   Route,
-  withRouter
+  Switch,
+  Redirect
 } from 'react-router-dom';
 
-function App() {
-  return (
-    <>
-      <Router forceRefresh={true}>
-        <Nav />
-        <Switch>
-          <Route path="/Home" component={withRouter(Home)} />
-          <Route path="/Projects" component={withRouter(Projects)} />
-          <Route path="/About" component={withRouter(About)} />
-          <Route path="/Contact" component={withRouter(Contact)} />
-        </Switch>
-      </Router>
-    </>
-  );
+class App extends Component {
+  
+  render() {
+    return (
+      <>
+        <Router>
+          <Nav />
+          <Switch>
+            <Route exact path="/website/" component={Home} />
+            <Route exact path="/website/Projects" component={Projects} />
+            <Route exact path="/website/About" component={About} />
+            <Route exact path="/website/Contact" component={Contact} />
+            <Redirect to="/website/" />
+          </Switch>
+        </Router>
+      </>
+    );
+  }
 }
 
 export default App;
